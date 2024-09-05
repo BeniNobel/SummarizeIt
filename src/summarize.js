@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// This is the function where the call to the API is made. Returns the summarized text as a string.
 async function summarize(text) {
     let data = JSON.stringify({
         "inputs": text,
@@ -26,3 +27,6 @@ async function summarize(text) {
         console.log(err);
     }
 }
+
+// Allows for summarize() to be called outside of this file
+module.exports = summarize;
