@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 // This is the function where the call to the API is made. Returns the summarized text as a string.
 async function summarize(text) {
@@ -15,7 +15,7 @@ async function summarize(text) {
         url: 'https://api-inference.huggingface.co/models/facebook/bart-large-cnn',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + process.env['ACCESS_TOKEN']
+          'Authorization': 'Bearer ' + process.env.ACCESS_TOKEN
         },
         data: data
       };
@@ -28,5 +28,5 @@ async function summarize(text) {
     }
 }
 
-// Allows for summarize() to be called outside of this file
-module.exports = summarize;
+// Export the summarize function
+export default summarize;
