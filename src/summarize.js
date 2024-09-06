@@ -20,8 +20,6 @@ async function summarize(text) {
         data: data
       };
 
-    console.log('Access Token:', process.env.ACCESS_TOKEN);
-
     try {
         const response = await axios.request(config);
         return response.data[0].summary_text;
