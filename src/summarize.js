@@ -20,11 +20,14 @@ async function summarize(text) {
         data: data
       };
 
+    console.log('Access Token:', process.env.ACCESS_TOKEN);
+
     try {
         const response = await axios.request(config);
         return response.data[0].summary_text;
     } catch (err) {
         console.log(err);
+        throw new Error('An error occurred while summarizing the text.');
     }
 }
 

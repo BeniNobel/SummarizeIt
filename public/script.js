@@ -34,7 +34,7 @@ submitButton.addEventListener("click", async () => {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/summarize', requestOptions);
+        const response = await fetch('/summarize', requestOptions);
         const summary = await response.text();
 
         summarizedText.value = summary;
