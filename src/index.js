@@ -1,6 +1,5 @@
 import express from 'express';
 import dotenv from 'dotenv';
-// import bodyParser from 'body-parser';
 import summarize, { MAX_TEXT_LENGTH, MIN_TEXT_LENGTH } from './summarize.js';
 import cors from 'cors';
 
