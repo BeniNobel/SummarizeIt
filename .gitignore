@@ -131,3 +131,6 @@ dist
 
 # mp4 files
 *.mp4
+
+# OS generated files
+.DS_Store
